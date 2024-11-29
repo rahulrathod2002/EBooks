@@ -1,0 +1,130 @@
+.admin-books-edit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.existing-admin-books-edit-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.admin-book-edit-data-img-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.admin-book-edit-data-img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.admin-book-edit-data-info {
+    flex: 2;
+}
+
+.admin-book-edit-data-name,
+.admin-book-edit-data-author,
+.admin-book-edit-data-description {
+    margin: 10px 0;
+}
+
+.new-admin-books-edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.admin-book-edit-new-img-container {
+    margin-bottom: 20px;
+}
+
+.admin-book-edit-new-img-container input {
+    margin-bottom: 10px;
+}
+
+.admin-book-edit-new-img-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.admin-books-edit-container button {
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    background-color: #ff8c00;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.admin-books-edit-container button:hover {
+    background-color: #ff9900;
+    transform: scale(1.01);
+}
+
+input[type="file"] {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.admin-books-edit-container input,
+.admin-books-edit-container textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-edit-book-update-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-edit-book-update-button:hover {
+    background-color: #0056b3;
+}

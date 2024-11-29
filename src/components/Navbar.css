@@ -1,0 +1,110 @@
+/* Navbar Container */
+.books-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8EACCD;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.books-navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Right Section (Links + SignIn) */
+.books-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Space between items */
+}
+
+/* Navigation Links - Desktop Defaults */
+.books-navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.books-navbar-links li {
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.books-navbar-links li:hover {
+    color: #ff8c00;
+}
+
+/* Sign In Button */
+.books-navbar-signin {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.books-navbar-signin:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Icon */
+.books-navbar-menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Hide links initially */
+    .books-navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #8EACCD;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    /* Show menu when toggled */
+    .books-navbar-links.show-menu {
+        display: flex;
+    }
+
+    .books-navbar-menu-icon {
+        display: block;
+    }
+
+    .books-navbar-signin {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .books-navbar-logo {
+        font-size: 20px;
+    }
+
+    .books-navbar-signin {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}

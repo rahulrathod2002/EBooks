@@ -1,0 +1,48 @@
+.readers-data-container {
+    padding: 20px;
+}
+
+.create-reader-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.create-reader-button:hover {
+    background-color: #45a049;
+}
+
+.readers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.readers-table th,
+.readers-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.readers-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.edit-icon,
+.delete-icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+    opacity: 0.7;
+}

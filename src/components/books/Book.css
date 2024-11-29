@@ -1,0 +1,185 @@
+/* Modal Overlay */
+.book-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Container with Centering and Drop Shadow */
+.book-card-center-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Keyframe Animation for Slide Down Effect */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Book Image */
+.book-card-center-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.book-card-center-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Author */
+.book-card-center-author {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.book-card-center-description {
+    font-size: 14px;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Input Fields */
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.book-card-center-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-card-center-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Edit Icon */
+.book-card-edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.book-card-edit-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-card-center-container {
+        padding: 15px;
+        max-width: 400px;
+    }
+
+    .book-card-center-img {
+        height: 150px;
+    }
+
+    .book-card-center-title {
+        font-size: 18px;
+    }
+
+    .book-card-center-author {
+        font-size: 14px;
+    }
+
+    .book-card-center-description {
+        font-size: 13px;
+    }
+
+    input {
+        font-size: 13px;
+    }
+
+    .book-card-center-button {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-card-center-container {
+        padding: 10px;
+    }
+
+    .book-card-center-img {
+        height: 120px;
+    }
+
+    .book-card-center-title {
+        font-size: 16px;
+    }
+
+    .book-card-center-author {
+        font-size: 13px;
+    }
+
+    .book-card-center-description {
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .book-card-center-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

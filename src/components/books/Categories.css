@@ -1,0 +1,123 @@
+.books-categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    /* Ensure full height on small screens */
+}
+
+.books-categories-heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.books-categories-unordered-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.books-categories-card {
+    flex: 1;
+    /* Default width for larger screens */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Added transition for smooth scale and shadow effects */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    /* Removed left-right padding */
+    min-width: 200px;
+    /* Set minimum width to prevent the cards from being too small on mobile */
+}
+
+.books-categories-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    /* Scale the card slightly and lift it on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Larger shadow for more impact */
+}
+
+.books-categories-img {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.books-categories-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #34495e;
+    margin: 15px 0 5px;
+}
+
+.books-categories-type {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* Responsive Styles for Tablets and Mobile Devices */
+@media (max-width: 1024px) {
+    .books-categories-card {
+        flex: 0 1 calc(33.33% - 20px);
+        /* 3 items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .books-categories-card {
+        flex: 1;
+        /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .books-categories-card {
+        flex: 1;
+        /* Default width for larger screens */
+        background: #ffffff97;
+        /* border-radius: 12px; */
+        /* overflow: hidden; */
+        /* text-align: center; */
+        /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+        /* Added transition for smooth scale and shadow effects */
+        /* cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center; */
+        padding: 5px 0;
+        min-width: 160px;
+    }
+
+    .books-categories-heading {
+        font-size: 28px;
+    }
+
+    .books-categories-title {
+        font-size: 18px;
+    }
+
+    .books-categories-type {
+        font-size: 12px;
+    }
+}

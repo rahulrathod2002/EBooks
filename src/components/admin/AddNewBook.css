@@ -1,0 +1,97 @@
+.add-new-book-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-new-book-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.add-new-book-image-container input {
+    margin-bottom: 10px;
+}
+
+.add-new-book-image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.add-new-book-container button {
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.add-new-book-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.01);
+}
+
+input[type="file"] {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.add-new-book-container input,
+.add-new-book-container textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-new-book-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-new-book-container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

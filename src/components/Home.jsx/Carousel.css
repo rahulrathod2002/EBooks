@@ -1,0 +1,109 @@
+.ebook-carousel {
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.carousel-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Styling for dots */
+.slick-dots li button:before {
+    font-size: 20px;
+    color: #8a8a8a;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #4a4a4a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .carousel-image {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-image {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 35vh;
+    }
+
+    .ebook-carousel h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-image {
+        height: 30vh;
+    }
+
+    .ebook-carousel h2 {
+        font-size: 20px;
+    }
+
+    .carousel-caption {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-image {
+        height: 25vh;
+    }
+
+    .ebook-carousel h2 {
+        font-size: 18px;
+    }
+
+    .carousel-caption {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .carousel-image {
+        height: 20vh;
+    }
+
+    .ebook-carousel h2 {
+        font-size: 16px;
+    }
+
+    .carousel-caption {
+        font-size: 12px;
+    }
+}
