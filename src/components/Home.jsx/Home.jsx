@@ -7,11 +7,10 @@ import BooksList from "../books/BooksList";
 import Categories from "../books/Categories";
 
 function Home() {
-    const { books } = useSelector((state) => state.books); // Access books from Redux
+    const { books } = useSelector((state) => state.books);
     const [searchTerm, setSearchTerm] = useState("");
     const [category, setCategory] = useState("");
 
-    // Memoized filtered books
     const filteredBooks = useMemo(() => {
         return books.filter((book) => {
             const matchesSearch = book.bookName.toLowerCase().includes(searchTerm.toLowerCase());
@@ -20,10 +19,8 @@ function Home() {
         });
     }, [books, searchTerm, category]);
 
-    // Memoized callback for setting search term
     const handleSearch = useCallback((term) => setSearchTerm(term), []);
 
-    // Memoized callback for setting category
     const handleCategory = useCallback((cat) => setCategory(cat), []);
 
     return (

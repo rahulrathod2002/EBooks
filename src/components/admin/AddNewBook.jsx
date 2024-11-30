@@ -13,6 +13,8 @@ function AddNewBook() {
     coverImage: null,
     pdfFile: null,
   });
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   // Handle input change for text fields
   const handleInputChange = (e) => {
@@ -34,7 +36,24 @@ function AddNewBook() {
   };
 
   // Handle form submission
-  const handleAddBook = () => {
+  const handleAddBook = async () => {
+    // Validate all fields
+    if (
+      !newBook.name ||
+      !newBook.author ||
+      !newBook.description ||
+      !newBook.category ||
+      !newBook.coverImage ||
+      !newBook.pdfFile
+    ) {
+      setError('Please fill all the details.');
+      return; // Prevent form submission if validation fails
+    }
+
+    // Reset error message if all fields are filled
+    setError('');
+
+    // Prepare the FormData for submission
     const formData = new FormData();
     formData.append('bookName', newBook.name);
     formData.append('writerName', newBook.author);
@@ -44,12 +63,31 @@ function AddNewBook() {
     if (newBook.coverImage) formData.append('coverImage', newBook.coverImage);
     if (newBook.pdfFile) formData.append('pdfFile', newBook.pdfFile);
 
-    dispatch(addBook(formData));
+    try {
+      await dispatch(addBook(formData));
+
+      setSuccessMessage('Book added successfully!');
+      setNewBook({
+        name: '',
+        author: '',
+        description: '',
+        category: '',
+        coverImage: null,
+        pdfFile: null,
+      });
+    } catch (error) {
+      // Handle error during book addition
+      setError('Failed to add the book. Please try again later.');
+    }
   };
 
   return (
     <div className="add-new-book-container">
       <h1>Add New Book</h1>
+
+      {/* Display error or success message */}
+      {error && <p className="error-message">{error}</p>}
+      {successMessage && <p className="success-message">{successMessage}</p>}
 
       <label>Cover Image</label>
       <input type="file" name="coverImage" accept="image/*" onChange={handleFileChange} />

@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import APIs from '../Api';  // Import the APIs.js file
+import APIs from '../Api';
 
-// Async action to submit reader data (Create)
+//Create
 export const submitReaderData = createAsyncThunk(
     'reader/submitReaderData',
     async (readerData, { rejectWithValue }) => {
@@ -15,7 +15,7 @@ export const submitReaderData = createAsyncThunk(
     }
 );
 
-// Async action to fetch reader list (Read)
+//Read
 export const getReaderList = createAsyncThunk(
     'reader/getReaderList',
     async (_, { rejectWithValue }) => {
@@ -28,7 +28,7 @@ export const getReaderList = createAsyncThunk(
     }
 );
 
-// Async action to update reader data (Update)
+//Update
 export const updateReaderData = createAsyncThunk(
     'reader/updateReaderData',
     async ({ id, readerData }, { rejectWithValue }) => {
@@ -41,13 +41,13 @@ export const updateReaderData = createAsyncThunk(
     }
 );
 
-// Async action to delete a reader (Delete)
+//Delete
 export const deleteReader = createAsyncThunk(
     'reader/deleteReader',
     async (id, { rejectWithValue }) => {
         try {
-            await axios.delete(APIs.reader.delete(id));  // API to delete a reader
-            return id;  // Return the ID of the deleted reader to remove from the state
+            await axios.delete(APIs.reader.delete(id));
+            return id;
         } catch (error) {
             return rejectWithValue(error.response.data);
         }
@@ -57,7 +57,7 @@ export const deleteReader = createAsyncThunk(
 const readerSlice = createSlice({
     name: 'reader',
     initialState: {
-        list: [], // Array to hold the list of readers
+        list: [],
         name: '',
         contact: '',
         city: '',

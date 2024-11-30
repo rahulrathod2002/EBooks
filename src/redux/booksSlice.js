@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import APIs from '../Api';
 
-// Async actions for API integration
 
 // Fetch all books
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async (_, { rejectWithValue }) => {
@@ -18,7 +17,7 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async (_, { rejec
     }
 });
 
-// Create a new book with coverImage, pdfFile, and category
+// Create a new book 
 export const addBook = createAsyncThunk('books/addBook', async (formData, { rejectWithValue }) => {
     try {
         const config = {
@@ -31,7 +30,7 @@ export const addBook = createAsyncThunk('books/addBook', async (formData, { reje
     }
 });
 
-// Update an existing book with coverImage, pdfFile, and category
+// Update an existing book 
 export const updateBook = createAsyncThunk(
     'books/updateBook',
     async ({ id, formData }, { rejectWithValue }) => {
@@ -61,10 +60,10 @@ export const deleteBook = createAsyncThunk('books/deleteBook', async (id, { reje
 const booksSlice = createSlice({
     name: 'books',
     initialState: {
-        books: [], // List of all books
-        selectedBook: null, // Single selected book
-        status: 'idle', // Request status
-        error: null, // Error messages
+        books: [],
+        selectedBook: null,
+        status: 'idle',
+        error: null,
     },
     reducers: {
         // Select a book
@@ -88,7 +87,7 @@ const booksSlice = createSlice({
                     ...book,
                     coverImage: book.coverImage || null,
                     pdfFile: book.pdfFile || null,
-                    category: book.category || '', // Include category
+                    category: book.category || '',
                 }));
             })
             .addCase(fetchBooks.rejected, (state, action) => {
@@ -106,7 +105,7 @@ const booksSlice = createSlice({
                     ...action.payload,
                     coverImage: action.payload.coverImage || null,
                     pdfFile: action.payload.pdfFile || null,
-                    category: action.payload.category || '', // Include category
+                    category: action.payload.category || '',
                 };
                 state.books.push(newBook);
             })
@@ -128,7 +127,7 @@ const booksSlice = createSlice({
                         ...action.payload,
                         coverImage: action.payload.coverImage || state.books[index].coverImage,
                         pdfFile: action.payload.pdfFile || state.books[index].pdfFile,
-                        category: action.payload.category || state.books[index].category, // Update category
+                        category: action.payload.category || state.books[index].category,
                     };
                 }
             })

@@ -4,8 +4,6 @@
     align-items: center;
     padding: 20px;
     background-color: #f9f9f9;
-    min-height: 100vh;
-    /* Ensure full height on small screens */
 }
 
 .books-categories-heading {
@@ -31,28 +29,22 @@
 
 .books-categories-card {
     flex: 1;
-    /* Default width for larger screens */
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Added transition for smooth scale and shadow effects */
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
-    /* Removed left-right padding */
     min-width: 200px;
-    /* Set minimum width to prevent the cards from being too small on mobile */
 }
 
 .books-categories-card:hover {
     transform: translateY(-8px) scale(1.05);
-    /* Scale the card slightly and lift it on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* Larger shadow for more impact */
 }
 
 .books-categories-img {
@@ -76,7 +68,6 @@
     padding: 0 15px;
 }
 
-/* Responsive Styles for Tablets and Mobile Devices */
 @media (max-width: 1024px) {
     .books-categories-card {
         flex: 0 1 calc(33.33% - 20px);
@@ -94,17 +85,7 @@
 @media (max-width: 480px) {
     .books-categories-card {
         flex: 1;
-        /* Default width for larger screens */
         background: #ffffff97;
-        /* border-radius: 12px; */
-        /* overflow: hidden; */
-        /* text-align: center; */
-        /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-        /* Added transition for smooth scale and shadow effects */
-        /* cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center; */
         padding: 5px 0;
         min-width: 160px;
     }

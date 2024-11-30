@@ -6,7 +6,7 @@ import horror from "../../assets/horror.jpg";
 import theGreat from "../../assets/TheGreat.jpg";
 import thrill from "../../assets/thrill.jpg";
 
-// Array of book categories
+// Array of book categories for now, but for later include API's data(categories from server)
 const books = [
     { img: fantasy, type: "Fantasy" },
     { img: design, type: "Design" },

@@ -21,7 +21,7 @@ function AdminLogin() {
     // Redirect to dashboard if already authenticated
     useEffect(() => {
         if (isAuthenticated) {
-            navigate('/');
+            navigate('/admin-dashboard');
         }
     }, [isAuthenticated, navigate]);
 

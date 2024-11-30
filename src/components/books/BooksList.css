@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    /* Reduced padding for mobile friendliness */
     background-color: #fff;
 }
 
@@ -13,25 +12,20 @@
     padding: 0;
     list-style: none;
     gap: 15px;
-    /* Adjusted gap for better spacing */
     max-width: 1200px;
 }
 
 .books-card {
     background: #fff;
     padding: 10px;
-    /* Reduced padding */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    /* Reduced gap between elements */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1 1 calc(25% - 10px);
-    /* Default to 4 cards per row */
     box-sizing: border-box;
-    /* Ensure proper sizing */
 }
 
 .books-card:hover {
@@ -81,7 +75,6 @@
     background-color: #0056b3;
 }
 
-/* Tablet View */
 @media (max-width: 768px) {
     .books-card {
         flex: 1 1 calc(33.33% - 10px);
@@ -89,7 +82,6 @@
     }
 }
 
-/* Mobile View */
 @media (max-width: 480px) {
     .books-card {
         flex: 1 1 calc(25% - 10px);

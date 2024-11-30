@@ -63,8 +63,11 @@ function Book({ book, onClose }) {
     };
 
     const handleEditIconClick = () => {
-        navigate(`/admin-edit/${selectedBook.id}`);
+        if (selectedBook && selectedBook.id) {
+            navigate(`/admin-edit/${selectedBook.id}`);
+        }
     };
+
 
     if (!selectedBook) {
         return null;

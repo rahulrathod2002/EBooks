@@ -8,12 +8,10 @@ import menuIcon from '../assets/list.png';
 function Navbar() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const [menuOpen, setMenuOpen] = useState(false); // State to control menu visibility
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // Access authentication state from Redux store
     const { isAuthenticated, username } = useSelector((state) => state.admin);
 
-    // Restore session when the component mounts
     useEffect(() => {
         dispatch(restoreSession());
     }, [dispatch]);

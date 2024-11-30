@@ -14,10 +14,10 @@ const adminSlice = createSlice({
             state.isAuthenticated = true;
             state.username = action.payload.username;
             state.role = action.payload.role;
-            localStorage.setItem('adminSession', JSON.stringify(action.payload)); // Save session in localStorage
+            localStorage.setItem('adminSession', JSON.stringify(action.payload));
         },
         logout: (state) => {
-            localStorage.removeItem('adminSession'); // Remove session from localStorage
+            localStorage.removeItem('adminSession');
             state.isAuthenticated = false;
             state.username = '';
             state.role = '';

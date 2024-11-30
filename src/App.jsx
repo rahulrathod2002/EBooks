@@ -36,7 +36,7 @@ function App() {
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/create-reader" element={<CreateReader />} />
           <Route path="/reader-data" element={<Readers />} />
-          <Route path="/admin-edit" element={<EditBooks />} />
+          <Route path="/admin-edit/:id" element={<EditBooks />} />
           <Route path="/admin-add-new-book" element={<AddNewBook />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/footer" element={<Footer />} />

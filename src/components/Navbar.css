@@ -9,19 +9,16 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
 .books-navbar-logo {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
 
-/* Right Section (Links + SignIn) */
 .books-navbar-right {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* Space between items */
 }
 
 /* Navigation Links - Desktop Defaults */
@@ -43,7 +40,6 @@
     color: #ff8c00;
 }
 
-/* Sign In Button */
 .books-navbar-signin {
     padding: 8px 15px;
     border: none;

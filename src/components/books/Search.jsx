@@ -12,7 +12,7 @@ function Search({ books, setSearchTerm }) {
             setQuery(value);
 
             if (!value.trim()) {
-                setSearchTerm(""); // Clear search term on empty input
+                setSearchTerm("");
                 setSuggestions([]);
                 return;
             }

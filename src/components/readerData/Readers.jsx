@@ -9,26 +9,22 @@ import delete_icon from '../../assets/delete.png';
 function Readers() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const readers = useSelector((state) => state.reader.list);  // Assuming your Redux store has a list of readers
+    const readers = useSelector((state) => state.reader.list);
     const status = useSelector((state) => state.reader.status);
 
     useEffect(() => {
-        // Fetch reader data when the component mounts
         dispatch(getReaderList());
     }, [dispatch]);
 
     const handleCreateReader = () => {
-        // Redirect to the page or form to create a new reader
         navigate('/create-reader');
     };
 
     const handleDeleteReader = (id) => {
-        // Delete reader using the delete API from Redux slice
         dispatch(deleteReader(id));
     };
 
     const handleEditReader = (id) => {
-        // Redirect to the page to edit the reader
         navigate(`/edit-reader/${id}`);
     };
 
